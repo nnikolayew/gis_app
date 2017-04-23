@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @autorization.number %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @autorization.password %>
+</p>
+
+<%= link_to 'Edit', edit_autorization_path(@autorization) %> |
+<%= link_to 'Back', autorizations_path %>
