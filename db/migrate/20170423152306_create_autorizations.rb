@@ -7,4 +7,5 @@ class CreateAutorizations < ActiveRecord::Migration
       t.timestamps null: false
     end
   end
+
 end

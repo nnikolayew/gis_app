@@ -1,14 +1,29 @@
+<header>
+    <div class="title">Система учета и контроля энергетических ресурсов</div>
+    <button class="btn-header"><%= link_to 'выйти' %></button>
+</header>
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Number:</strong>
+  <strong>Идентификационный номер:</strong>
   <%= @autorization.number %>
 </p>
 
 <p>
-  <strong>Password:</strong>
-  <%= @autorization.password %>
+  <strong>Услуга:</strong>
+  <%= @autorization.paymenttype %>
 </p>
 
-<%= link_to 'Edit', edit_autorization_path(@autorization) %> |
-<%= link_to 'Back', autorizations_path %>
+<p>
+  <strong>Объем потребления:</strong>
+  <%= @autorization.amount %>
+</p>
+
+<p>
+  <strong>Цена:</strong>
+  <%= @autorization.price %>
+</p>
+
+<%= link_to 'Редактировать', edit_autorization_path(@autorization) %> |
+<%= link_to 'На главную', autorizations_path %>

@@ -1,3 +1,130 @@
-// Place all the styles related to the Autorizations controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  font-family: "Arial Narrow";
+  margin: 0 auto;
+  font-size: 1em;
+  width: 1084px;
+}
+
+h1{
+  margin: 35px auto;
+  width: 753px;
+}
+
+#login {
+  padding-top: 50px;
+  height: 350px;
+  background-color: #eeeeee;
+}
+
+#login .window {
+  border-radius: 3px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 50%;
+
+  background-color: #ffffff;
+  padding: 50px;
+  font-size: 0;
+}
+
+#login input[type=text] {
+  border: none;
+  border-radius: 3px;
+  box-sizing: border-box;
+  margin: 10px 0;
+  padding: 15px 20px;
+  outline: none;
+  width: 100%;
+  background-color: #eeeeee;
+  font-size: 14px;
+}
+
+#login .btn {
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  margin: 15px 0 0 0;
+  padding: 13px 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #74c7d7;
+  color: #ffffff !important;
+  cursor: pointer;
+}
+
+#login .btn a{
+  text-decoration: none;
+  color: #ffffff !important;
+}
+#login label {
+  margin: 10px;
+  font-size: 14px;
+}
+
+#login label input {
+  float: left;
+}
+
+#login input[type=text].error {
+  animation: errorInput 800ms linear 0ms normal 1;
+}
+
+@keyframes errorInput {
+  0% {
+    background-color: #eeeeee;
+  }
+  20% {
+    background-color: #f88174;
+  }
+  100% {
+    background-color: #eeeeee;
+  }
+}
+
+.operations{
+  width: 1084px;
+  margin: 20px 0;
+
+  tr{
+    padding: 10px;
+    font-size: 22px;
+    display: block;
+
+    td{
+      width: 258px;
+      text-align: center;
+
+      span{
+        outline: none;
+        margin: 15px 0 0 0;
+        padding: 13px 0;
+        width: 100%;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+
+    .table-btn{
+      width: 100px;
+      padding-left: 20px;
+    }
+  }
+
+  .header-table{
+    background-color: #ececec;
+    font-family: "Arial Narrow";
+    font-size: 19px;
+
+    th{
+      padding: 10px 25px;
+    }
+  }
+
+  .col_1, .col_2, .col_3{
+    width: 235px;
+  }
+}

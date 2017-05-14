@@ -1,6 +1,11 @@
-<h1>Editing Autorization</h1>
+<header>
+    <div class="title">Система учета и контроля энергетических ресурсов</div>
+    <button class="btn-header"><%= link_to 'выйти' %></button>
+</header>
+
+<h1>Редактирования счета за потребление</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @autorization %> |
-<%= link_to 'Back', autorizations_path %>
+<%= link_to 'Просмотр', @autorization %> |
+<%= link_to 'На главную', autorizations_path %>

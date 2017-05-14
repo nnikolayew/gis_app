@@ -1,29 +1,31 @@
-<p id="notice"><%= notice %></p>
+<body>
+    <header>
+        <div class="title">Система учета и контроля энергетических ресурсов</div>
+        <button class="btn-header"><%= link_to 'выйти' %></button>
+    </header>
+    <container>
+        <table class="operations">
+            <tr class="header-table">
+              <th class="col-xs-4">Идентификационный номер</th>
+              <th class="col-xs-4">Наименование услуги</th>
+              <th class="col-xs-4">Израсходовано</th>
+              <th class="col-xs-4">Цена</th>
+              <th colspan="4"></th>
+            </tr>
+            <% @autorizations.each do |autorization| %>
+              <tr>
+                <td class="col_1"><%= autorization.number %></td>
+                <td class="col_1"><%= autorization.paymenttype %></td>
+                <td class="col_1"><%= autorization.amount %></td>
+                <td class="col_1"><%= autorization.price %></td>
+                <td class="table-btn"><span><%= link_to 'Просмотр', autorization %></span></td>
+                <td class="table-btn"><span><%= link_to 'Оплата', autorization, method: :delete, data: { confirm: 'Вы желаете перейти к окну оплаты?' } %></span></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
 
-<h1>Listing Autorizations</h1>
+<%= link_to 'New Book', new_autorization_path %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Number</th>
-      <th>Password</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @autorizations.each do |autorization| %>
-      <tr>
-        <td><%= autorization.number %></td>
-        <td><%= autorization.password %></td>
-        <td><%= link_to 'Show', autorization %></td>
-        <td><%= link_to 'Edit', edit_autorization_path(autorization) %></td>
-        <td><%= link_to 'Destroy', autorization, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Autorization', new_autorization_path %>
+    </container>
+</body>

@@ -12,14 +12,37 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :number %><br>
-    <%= f.text_field :number %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.text_field :password %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+    <div class="contact_form" action="#" method="post" name="contact_form">
+      <ul>
+          <li>
+               <h2>Создание нового счета</h2>
+               <span class="required_notification">* Обязательные поля для заполнения</span>
+          </li>
+          <li>
+              <%= f.label :Идентификационный_номер%><br>
+              <%= f.text_field :number, :required => true%>
+          </li>
+          <li>
+              <%= f.label :Наименование_услуги %><br>
+              <%= f.text_field :paymenttype, :required => true%>
+              <span class="form_hint">Введите что-то из "Электричество", "Газ", "Горячая вода", "Холодная вода", "Водоотведение"</span>
+          </li>
+          <li>
+              <%= f.label :Израсходовано %><br>
+              <%= f.text_field :amount, :required => true %>
+              <span class="form_hint">Введите в м<sup>3</sup></span>
+          </li>
+          <li>
+              <%= f.label :Цена %><br>
+              <%= f.text_field :price, :required => true %>
+              <span class="form_hint">Введите в руб</span>
+          </li>
+          <li>
+            <div class="actions">
+                <%= f.submit %>
+            </div>
+          </li>
+      </ul>
+    </div>
   </div>
 <% end %>

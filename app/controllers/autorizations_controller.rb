@@ -69,6 +69,6 @@ class AutorizationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def autorization_params
-      params.require(:autorization).permit(:number, :password)
+      params.require(:autorization).permit(:number, :payment_type, :amount, :price)
     end
 end
